@@ -1,5 +1,8 @@
 package com.MaximumNumberTest;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class MaximumNumber<T> {
 
 
@@ -50,14 +53,14 @@ public class MaximumNumber<T> {
     }
 
     /* UC4 Refactor1 : Using Generic Method */
-    public T checkMaximum(T object1, T object2, T object3) {
+    public T checkMaximum(T ...object) {
+        List<T> listOfEle = Arrays.asList(object);
+        T max = listOfEle.get(0);
         GenericComparator<T> comparator = new GenericComparator<T>();
-        T max = object1;
-        if (comparator.compare(object2, max) > 0) {
-            max = object2;
-        }
-        if (comparator.compare(object3, max) > 0) {
-            max = object3;
+        for (T ele : listOfEle) {
+            if (comparator.compare(ele, max) > 0) {
+                max = ele;
+            }
         }
         return max;
     }

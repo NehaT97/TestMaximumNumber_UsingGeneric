@@ -11,8 +11,8 @@ public class GenericComparator<T> implements Comparator<T> {
         if (o1 instanceof Integer) {
             return ((Integer) o1).compareTo((Integer) o2);
         }
-        if (o1 instanceof Double) {
-            return ((Double) o1).compareTo((Double) o2);
+        if (o1 instanceof Float) {
+            return ((Float) o1).compareTo((Float) o2);
         }
         return 0;
     }
