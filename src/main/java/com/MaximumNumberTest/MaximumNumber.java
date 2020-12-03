@@ -1,9 +1,10 @@
 package com.MaximumNumberTest;
 
-public class MaximumNumber {
+public class MaximumNumber<T> {
+
 
     /* UC1:  Method to Find Maximum Integer Element */
-    public Integer checkMaximum(Integer num1, Integer num2, Integer num3) {
+    public Integer checkMaximumInteger(Integer num1, Integer num2, Integer num3) {
         int maxNumber = num1;
 
         if (num2.compareTo(maxNumber) > 0) {
@@ -18,7 +19,7 @@ public class MaximumNumber {
     }
 
     /* UC2:  Method to Find Maximum Float Number */
-    public Float checkMaximum(Float num1, Float num2, Float num3) {
+    public Float checkMaximumFloat(Float num1, Float num2, Float num3) {
         float maxNumber = num1;
 
         if (num2.compareTo(maxNumber) > 0) {
@@ -32,8 +33,9 @@ public class MaximumNumber {
         return maxNumber;
     }
 
+
     /* UC3:  Method to Find Maximum String */
-    public String checkMaximum(String str1, String str2, String str3) {
+    public String checkMaximumString(String str1, String str2, String str3) {
         String maxString = str1;
 
         if (str2.compareTo(maxString) > 0) {
@@ -47,4 +49,16 @@ public class MaximumNumber {
         return maxString;
     }
 
+    /* UC4 Refactor1 : Using Generic Method */
+    public T checkMaximum(T object1, T object2, T object3) {
+        GenericComparator<T> comparator = new GenericComparator<T>();
+        T max = object1;
+        if (comparator.compare(object2, max) > 0) {
+            max = object2;
+        }
+        if (comparator.compare(object3, max) > 0) {
+            max = object3;
+        }
+        return max;
+    }
 }
