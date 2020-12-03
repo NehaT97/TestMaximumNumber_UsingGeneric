@@ -33,4 +33,24 @@ public class MaximumNumberTest {
         Assert.assertEquals(expectedResult, maximumResult);
     }
 
+    @Test
+    public void givenMaximumFloat_asFirstIndex_ShouldReturnMaximumFloat() {
+        Float maximumResult = maximumNumber.checkMaximum(1.4f, 1.2f, 1.0f);
+        Float expectedResult = 1.4f;
+        Assert.assertEquals(expectedResult, maximumResult);
+    }
+
+    @Test
+    public void givenMaximumFloat_asSecondIndex_ShouldReturnMaximumFloat() {
+        Float maximumResult = maximumNumber.checkMaximum(1.2f, 1.4f, 1.0f);
+        Float expectedResult = 1.4f;
+        Assert.assertEquals(expectedResult, maximumResult);
+    }
+
+    @Test
+    public void givenMaximumFloat_asThirdIndex_ShouldReturnMaximumFloat() {
+        Float maximumResult = maximumNumber.checkMaximum(1.0f, 1.2f, 1.4f);
+        Float expectedResult = 1.4f;
+        Assert.assertEquals(expectedResult, maximumResult);
+    }
 }
