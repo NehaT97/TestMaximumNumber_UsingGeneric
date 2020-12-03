@@ -52,7 +52,7 @@ public class MaximumNumber<T> {
         return maxString;
     }
 
-    /* UC4 Refactor1 : Using Generic Method */
+    /* UC5 Refactor2 : Using Generic Method And Print Max Number*/
     public T checkMaximum(T ...object) {
         List<T> listOfEle = Arrays.asList(object);
         T max = listOfEle.get(0);
@@ -62,6 +62,7 @@ public class MaximumNumber<T> {
                 max = ele;
             }
         }
+        System.out.println("Maximum Number:" +max);
         return max;
     }
 }
