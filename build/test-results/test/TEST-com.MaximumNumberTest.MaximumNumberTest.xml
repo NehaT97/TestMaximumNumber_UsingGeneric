@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.MaximumNumberTest.MaximumNumberTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-03T02:59:54" hostname="DESKTOP-H3OO9IA" time="0.014">
+<testsuite name="com.MaximumNumberTest.MaximumNumberTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-03T04:21:20" hostname="DESKTOP-H3OO9IA" time="0.02">
   <properties/>
-  <testcase name="givenMaximumInteger_asFirstIndex_ShouldReturnMaximumInteger" classname="com.MaximumNumberTest.MaximumNumberTest" time="0.014"/>
-  <system-out><![CDATA[Welcome to Maximum Number Test Program
-Maximum Number : 60
+  <testcase name="givenMaximumString_asSecondIndex_ShouldReturnMaximumString" classname="com.MaximumNumberTest.MaximumNumberTest" time="0.02"/>
+  <system-out><![CDATA[Welcome to Maximum Test Program
+Maximum String : Peach
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

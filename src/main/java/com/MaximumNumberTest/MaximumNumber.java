@@ -1,8 +1,8 @@
 package com.MaximumNumberTest;
-
 public class MaximumNumber {
 
-    public Integer checkMaximumInteger(Integer num1, Integer num2, Integer num3) {
+    /* UC1:  Method to Find Maximum Integer Element */
+    public Integer checkMaximum(Integer num1, Integer num2, Integer num3) {
         int maxNumber = num1;
 
         if (num2.compareTo(maxNumber) > 0) {
@@ -12,7 +12,8 @@ public class MaximumNumber {
         if (num3.compareTo(maxNumber) > 0) {
             maxNumber = num3;
         }
-        System.out.println("Maximum Number : " + maxNumber);
+        System.out.println("Maximum Integer Number : " + maxNumber);
         return maxNumber;
     }
+
 }
