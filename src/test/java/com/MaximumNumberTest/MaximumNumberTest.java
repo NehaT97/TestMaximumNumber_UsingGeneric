@@ -53,4 +53,22 @@ public class MaximumNumberTest {
         Float expectedResult = 1.4f;
         Assert.assertEquals(expectedResult, maximumResult);
     }
+
+    @Test
+    public void givenMaximumString_asFirstIndex_ShouldReturnMaximumString() {
+        String maximumResult = maximumNumber.checkMaximum("Peach", "Apple", "Banana");
+        Assert.assertEquals("Peach", maximumResult);
+    }
+
+    @Test
+    public void givenMaximumString_asSecondIndex_ShouldReturnMaximumString() {
+        String maximumResult = maximumNumber.checkMaximum("Apple", "Peach", "Banana");
+        Assert.assertEquals("Peach", maximumResult);
+    }
+
+    @Test
+    public void givenMaximumString_asThirdIndex_ShouldReturnMaximumString() {
+        String maximumResult = maximumNumber.checkMaximum("Banana", "Apple", "Peach");
+        Assert.assertEquals("Peach", maximumResult);
+    }
 }
